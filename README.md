@@ -63,3 +63,5 @@ It succeeds:
 ### Question
 Why does it fail with `--no-restore` flag in publish step? Shouldn't it succeed? I already restored packages during `dotnet restore "MyCoolTestApp.API/MyCoolTestApp.API.csproj"` step, so I don't want to restore it again during the publish step. Looks like I can't do that.
 Is this by design or is it a bug?
+
+To learn more about this, I opened an issue at dotnet/sdk github repo: https://github.com/dotnet/sdk/issues/37291
