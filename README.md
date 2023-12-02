@@ -11,7 +11,7 @@ Check out the code in this repo to see how simple this is. 😃
 ## Create Dockerfile
 ```dockerfile
 # https://hub.docker.com/_/microsoft-dotnet
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-jammy AS build
 WORKDIR /source
 
 # copy csproj files and restore as distinct layers
@@ -26,10 +26,10 @@ WORKDIR "/source/MyCoolTestApp.API"
 RUN dotnet publish --no-restore -o /app
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/runtime:8.0
+FROM mcr.microsoft.com/dotnet/nightly/aspnet:8.0-jammy-chiseled-composite
 WORKDIR /app
 COPY --from=build /app .
-ENTRYPOINT ["dotnet", "MyCoolTestApp.API.dll"]
+ENTRYPOINT ["./MyCoolTestApp.API"]
 ```
 
 ## Create an image 
