@@ -58,7 +58,7 @@ RUN dotnet publish -o /app
 
 It succeeds:
 
-<img width="750" alt="image" src="https://github.com/affableashish/docker-with-classlib/assets/30603497/15c31a17-b11e-42e1-a8d7-737114e12524">
+<img width="750" alt="image" src="https://github.com/affableashish/docker-with-classlib/assets/30603497/3ac07669-fbc9-4e6d-a3c7-ae42b68d42ad">
 
 ### Question
 Why does it fail with `--no-restore` flag in publish step? Shouldn't it succeed? I already restored packages during `dotnet restore "MyCoolTestApp.API/MyCoolTestApp.API.csproj"` step, so I don't want to restore it again during the publish step. Looks like I can't do that.
