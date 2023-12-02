@@ -65,3 +65,12 @@ Why does it fail with `--no-restore` flag in publish step? Shouldn't it succeed?
 Is this by design or is it a bug?
 
 To learn more about this, I opened an issue at dotnet/sdk github repo: https://github.com/dotnet/sdk/issues/37291
+
+## Run the image
+```bash
+docker run --rm -it -p 8000:8080 -e ASPNETCORE_ENVIRONMENT=Development akhanal/my-cool-api:0.1.1
+```
+
+And navigate to Swagger index page and play around:
+
+<img width="900" alt="image" src="https://github.com/affableashish/docker-with-classlib/assets/30603497/bcbbc2cf-5ca0-4fd7-b686-01300fdce838">
