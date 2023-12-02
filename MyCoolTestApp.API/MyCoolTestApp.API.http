@@ -1,0 +1,6 @@
+@MyCoolTestApp.API_HostAddress = http://localhost:5179
+
+GET {{MyCoolTestApp.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
