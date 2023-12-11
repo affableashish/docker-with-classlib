@@ -4,7 +4,7 @@ Containerizing a .NET 8 web api with a dependent class library.
 [Reference](https://github.com/dotnet/dotnet-docker/tree/main/samples/complexapp).
 
 ## Create a simple web api project with a dependent class library
-<img width="900" alt="image" src="https://github.com/affableashish/docker-with-classlib/assets/30603497/4e5d4512-e3e7-49ed-b263-a3686cc3d853">
+<img width="900" alt="image" src="https://github.com/akhanalcs/docker-with-classlib/assets/30603497/4e5d4512-e3e7-49ed-b263-a3686cc3d853">
 
 Check out the code in this repo to see how simple this is. 😃
 
@@ -58,7 +58,7 @@ RUN dotnet publish -o /app
 
 It succeeds:
 
-<img width="750" alt="image" src="https://github.com/affableashish/docker-with-classlib/assets/30603497/3ac07669-fbc9-4e6d-a3c7-ae42b68d42ad">
+<img width="750" alt="image" src="https://github.com/akhanalcs/docker-with-classlib/assets/30603497/3ac07669-fbc9-4e6d-a3c7-ae42b68d42ad">
 
 ### Question
 Why does it fail with `--no-restore` flag in publish step? Shouldn't it succeed? I already restored packages during `dotnet restore "MyCoolTestApp.API/MyCoolTestApp.API.csproj"` step, so I don't want to restore it again during the publish step. Looks like I can't do that.
@@ -73,4 +73,4 @@ docker run --rm -it -p 8000:8080 -e ASPNETCORE_ENVIRONMENT=Development akhanal/m
 
 And navigate to Swagger index page and play around:
 
-<img width="900" alt="image" src="https://github.com/affableashish/docker-with-classlib/assets/30603497/bcbbc2cf-5ca0-4fd7-b686-01300fdce838">
+<img width="900" alt="image" src="https://github.com/akhanalcs/docker-with-classlib/assets/30603497/bcbbc2cf-5ca0-4fd7-b686-01300fdce838">
